@@ -6,7 +6,8 @@ export const TodoContext = createContext({
        deleteTodo:(id)=> {},
        editTodo:(id , todo)=>{},
        toggleCompleted:(id)=> {},
-       howMuchCompleted:()=> {}
+       howMuchCompleted:()=> {},
+       totalTodoCount:()=>{}
 })
 export const   useTodo = ()=> {
     return useContext(TodoContext)
