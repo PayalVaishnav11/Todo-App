@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useTodo } from '../contexts'
 import { use } from 'react'
-// import editImg from "C:\Users\Payal\WebDev\ReactJs\10todoApp\src\Icons\Notes 3D Animated Icon (1).png"
 
-function TodoList({todo}) {   // ye todo ek object hai 
+function TodoList({todo}) {   //This todo is a object
   const [isTodoEditable,setIsTodoEditable] = useState(true)
   const [todoMsg,setTodoMsg] = useState(todo.todo)
   const {deleteTodo,editTodo,toggleCompleted} = useTodo()
-  // const {howMuchCompleted}= useTodo()
-  // let [count,setCount] = useState(0)
-
+ 
   const edit_Todo = ()=>{
       editTodo(todo.id ,{...todo,todo:todoMsg})
       setIsTodoEditable(false)
@@ -59,7 +56,7 @@ function TodoList({todo}) {   // ye todo ek object hai
                     setIsTodoEditable((prev) => !prev)
                 }
             }}
-             disabled={todo.isCompleted}  // agar completed hai to disabled kr do
+             disabled={todo.isCompleted}  
         >
            { isTodoEditable?
               <div className=' flex justify-between px-2 gap-1 items-center text-xl  '> Save <img src = "\src\Icons\Screenshot_2025-01-28_204102-removebg-preview.png" width="36px"/></div>   :

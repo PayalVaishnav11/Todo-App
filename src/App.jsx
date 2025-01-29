@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
-import './App.css'
+ import './App.css'
 import TodoForm from './components/TodoForm'
 import TodoList from './components/TodoList'
 import { TodoContextProvider } from './contexts'
 import { useTodo } from './contexts'
 import TodoCompleted from './components/TodoCompleted'
+
 
 
 function App() {
@@ -50,21 +51,23 @@ function App() {
      },[todos])
 
   return (
-    < TodoContextProvider value={{todos,addTodo,deleteTodo,toggleCompleted,editTodo,howMuchCompleted,totalTodoCount}}>
-      <h1 className='font-bold text-4xl text-white mt-14'>Manage Your Todos</h1>
-      <div className='mx-auto flex  flex-col justify-center gap-5 items-center  py-9 '>
-      
-            <TodoCompleted count={howMuchCompleted(count)} totalCount={totalTodoCount()}  />
-            <TodoForm/>
-   
-            {todos.map((eachTodo)=> (
-                 <div key={eachTodo.id}
-                     className='w-3/5 flex  justify-between  '>
-                    <TodoList todo={eachTodo} />
-                  </div>
-            ))}
 
-      </div>
+    < TodoContextProvider value={{todos,addTodo,deleteTodo,toggleCompleted,editTodo,howMuchCompleted,totalTodoCount}}>
+              <h1 className='font-bold text-4xl text-white mt-14'>Manage Your Todos</h1>
+              <div className='mx-auto flex  flex-col justify-center gap-5 items-center  py-9 '>
+              
+                    <TodoCompleted count={howMuchCompleted(count)} totalCount={totalTodoCount()}  />
+                    <TodoForm/>
+          
+                    {todos.map((eachTodo)=> (
+                        <div key={eachTodo.id}
+                            className='w-3/5 flex  justify-between  '>
+                            <TodoList todo={eachTodo} />
+                          </div>
+                    ))}
+
+              </div>
+  
     </TodoContextProvider>
   )
 }
