@@ -60,10 +60,10 @@ function App() {
                     <TodoForm/>
           
                     {todos.map((eachTodo)=> (
-                        <div key={eachTodo.id}
-                            className='w-3/5 flex  justify-between  '>
+                        <div key={eachTodo.id} 
+                            className=' w-[95%] sm:w-[60%] flex  justify-between  '>
                             <TodoList todo={eachTodo} />
-                          </div>
+                        </div>
                     ))}
 
               </div>

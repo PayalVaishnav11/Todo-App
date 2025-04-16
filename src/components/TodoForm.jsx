@@ -11,7 +11,7 @@ function TodoForm() {
   }
 
   return (
-    <form className='h-11 w-3/5 bg-slate-200 rounded-lg flex justify-between '
+    <form className='h-11 w-[95%] sm:w-[60%] bg-slate-200 rounded-lg flex justify-between '
           onSubmit={add}
     > 
     <input 
