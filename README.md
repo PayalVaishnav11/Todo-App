@@ -2,6 +2,9 @@
 
 A Todo App built with React, JavaScript, and styled with Tailwind CSS. The app allows users to add, edit, and delete todos.
 
+## Live Demo
+[click here to view the deployed app](https://todoapp-ujih.onrender.com)
+
 ## Features
 
 - **Add Todo**: Allows users to add a new todo item.
